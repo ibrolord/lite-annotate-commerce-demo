@@ -89,6 +89,23 @@ input {
   min-height: 36px;
 }
 
+#nav-cart-count:empty,
+#nav-cart-count:not(:empty):where(:is(:not([data-force-show]))):where(:has(+ *)) {
+  display: none;
+}
+
+#nav-cart-count {
+  min-width: 0.75rem;
+}
+
+#nav-cart-count:is(:not(:empty)) {
+  display: inline;
+}
+
+#nav-cart-count:is(:not(:empty)):where(:is([data-value='0'])) {
+  display: none;
+}
+
 .main-nav a[aria-current] {
   color: var(--ink);
 }
