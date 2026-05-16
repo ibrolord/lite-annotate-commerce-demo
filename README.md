@@ -63,6 +63,7 @@ The site reads Lite Annotate config in this order:
 1. URL query params: `?annotateApi=https://...&widgetUrl=https://.../widget.js`
 2. `localStorage` keys: `liteAnnotateApiUrl`, `liteAnnotateWidgetUrl`
 3. Local development fallback: `http://localhost:3001/widget.js`
+4. Hosted production fallback: `https://lite-annotate.vercel.app/widget.js`
 
 For local end-to-end testing:
 
@@ -84,7 +85,13 @@ Then open:
 http://localhost:4174/?annotateApi=http://localhost:3001
 ```
 
-For hosted testing, open the deployed site with:
+For hosted testing, the widget is installed by default on:
+
+```text
+https://lite-annotate-commerce-demo.vercel.app
+```
+
+To test another Lite Annotate API, override it with:
 
 ```text
 https://lite-annotate-commerce-demo.vercel.app/?annotateApi=https://<lite-annotate-api>

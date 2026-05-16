@@ -1,6 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const explicitApiUrl = params.get('annotateApi');
 const explicitWidgetUrl = params.get('widgetUrl');
+const DEFAULT_HOSTED_ANNOTATE_API_URL = 'https://lite-annotate.vercel.app';
 
 if (explicitApiUrl) {
   localStorage.setItem('liteAnnotateApiUrl', explicitApiUrl);
@@ -12,7 +13,7 @@ if (explicitWidgetUrl) {
 
 const apiUrl = explicitApiUrl ||
   localStorage.getItem('liteAnnotateApiUrl') ||
-  (isLocalHost() ? 'http://localhost:3001' : '');
+  (isLocalHost() ? 'http://localhost:3001' : DEFAULT_HOSTED_ANNOTATE_API_URL);
 
 const widgetUrl = explicitWidgetUrl ||
   localStorage.getItem('liteAnnotateWidgetUrl') ||
@@ -44,4 +45,3 @@ if (widgetUrl) {
 function isLocalHost() {
   return ['localhost', '127.0.0.1', '0.0.0.0'].includes(window.location.hostname);
 }
-
