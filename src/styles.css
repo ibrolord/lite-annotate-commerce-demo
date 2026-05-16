@@ -133,6 +133,11 @@ h1 {
   letter-spacing: 0;
 }
 
+.hero-copy h1 {
+  max-width: 760px;
+  line-height: 0.98;
+}
+
 h2 {
   margin-bottom: 12px;
   font-family: Georgia, "Times New Roman", serif;
