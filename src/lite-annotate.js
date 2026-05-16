@@ -1,7 +1,9 @@
 const params = new URLSearchParams(window.location.search);
 const explicitApiUrl = params.get('annotateApi');
 const explicitWidgetUrl = params.get('widgetUrl');
+const explicitRepo = params.get('annotateRepo');
 const DEFAULT_HOSTED_ANNOTATE_API_URL = 'https://lite-annotate-production.up.railway.app';
+const DEFAULT_ANNOTATE_REPO = 'ibrolord/lite-annotate-commerce-demo';
 
 if (explicitApiUrl) {
   localStorage.setItem('liteAnnotateApiUrl', explicitApiUrl);
@@ -9,6 +11,10 @@ if (explicitApiUrl) {
 
 if (explicitWidgetUrl) {
   localStorage.setItem('liteAnnotateWidgetUrl', explicitWidgetUrl);
+}
+
+if (explicitRepo) {
+  localStorage.setItem('liteAnnotateRepo', explicitRepo);
 }
 
 const apiUrl = explicitApiUrl ||
@@ -19,8 +25,12 @@ const widgetUrl = explicitWidgetUrl ||
   localStorage.getItem('liteAnnotateWidgetUrl') ||
   (apiUrl ? `${apiUrl.replace(/\/$/, '')}/widget.js` : '');
 
+const annotateRepo = explicitRepo ||
+  localStorage.getItem('liteAnnotateRepo') ||
+  DEFAULT_ANNOTATE_REPO;
+
 window.ANNOTATE_PROJECT_ID = 'cedar-and-sail-commerce';
-window.ANNOTATE_REPO = 'ibrolord/lite-annotate-commerce-demo';
+window.ANNOTATE_REPO = annotateRepo;
 
 if (apiUrl) {
   window.ANNOTATE_API_URL = apiUrl.replace(/\/$/, '');
