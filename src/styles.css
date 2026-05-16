@@ -637,3 +637,11 @@ p {
     width: 100%;
   }
 }
+
+.checkout-form .button-primary {
+  background: #2563eb;
+}
+
+.checkout-form .button-primary:hover {
+  background: #1d4ed8;
+}
