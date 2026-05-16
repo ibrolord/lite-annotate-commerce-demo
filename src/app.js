@@ -84,7 +84,7 @@ function renderCart() {
   const itemCount = entries.reduce((total, line) => total + line.quantity, 0);
   const subtotal = entries.reduce((total, line) => total + line.quantity * line.product.price, 0);
 
-  navCartCount.textContent = itemCount > 0 ? String(itemCount) : '';
+  navCartCount.textContent = String(itemCount);
   summaryItems.textContent = String(itemCount);
   summarySubtotal.textContent = `$${subtotal}`;
 
