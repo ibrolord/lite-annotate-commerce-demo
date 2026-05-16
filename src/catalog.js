@@ -6,7 +6,7 @@ export const products = [
     price: 128,
     color: 'Moss',
     description: 'A compact waxed-canvas duffel with a structured base and laptop sleeve.',
-    imageSrc: '/assets/products/canvas-weekender-missing.jpg',
+    imageSrc: '',
     imageAlt: 'Canvas weekender bag in moss green'
   },
   {
@@ -16,7 +16,7 @@ export const products = [
     price: 86,
     color: 'Oat',
     description: 'A brushed cotton throw sized for patios, cabins, and overnight bags.',
-    imageSrc: '/assets/products/harbor-throw-missing.jpg',
+    imageSrc: '',
     imageAlt: 'Oat cotton throw folded on a bench'
   },
   {
