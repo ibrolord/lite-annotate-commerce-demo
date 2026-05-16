@@ -9,8 +9,7 @@ test('formats a known customer loyalty greeting', () => {
   );
 });
 
-test('planted bug: missing customer currently crashes', () => {
+test('missing customer returns a readable fallback', () => {
   assert.equal(getCustomerById('vip-404'), undefined);
-  assert.throws(() => formatLoyaltyGreeting('vip-404'), /Cannot read/);
+  assert.equal(formatLoyaltyGreeting('vip-404'), 'Customer not found');
 });
-
