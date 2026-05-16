@@ -13,6 +13,7 @@ export function getCustomerById(customerId) {
 
 export function formatLoyaltyGreeting(customerId) {
   const customer = getCustomerById(customerId);
+  if (!customer) return 'Customer not found';
   return `Welcome back, ${customer.name}. Your ${customer.tier} credit is $${customer.credits}.`;
 }
 
