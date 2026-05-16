@@ -63,7 +63,7 @@ The site reads Lite Annotate config in this order:
 1. URL query params: `?annotateApi=https://...&widgetUrl=https://.../widget.js`
 2. `localStorage` keys: `liteAnnotateApiUrl`, `liteAnnotateWidgetUrl`
 3. Local development fallback: `http://localhost:3001/widget.js`
-4. Hosted production fallback: `https://lite-annotate.vercel.app/widget.js`
+4. Hosted production fallback: `https://lite-annotate-production.up.railway.app/widget.js`
 
 For local end-to-end testing:
 

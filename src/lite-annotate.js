@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const explicitApiUrl = params.get('annotateApi');
 const explicitWidgetUrl = params.get('widgetUrl');
-const DEFAULT_HOSTED_ANNOTATE_API_URL = 'https://lite-annotate.vercel.app';
+const DEFAULT_HOSTED_ANNOTATE_API_URL = 'https://lite-annotate-production.up.railway.app';
 
 if (explicitApiUrl) {
   localStorage.setItem('liteAnnotateApiUrl', explicitApiUrl);
