@@ -4,6 +4,12 @@
 
 Use Cedar & Sail as the customer ecommerce app for the Lite Annotate hackathon demo.
 
+Production target:
+
+```text
+https://lite-annotate-commerce-demo.vercel.app
+```
+
 ## Reproduction
 
 ### Scenario 1: Account Crash

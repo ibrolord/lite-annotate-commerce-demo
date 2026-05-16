@@ -52,6 +52,12 @@ Expected Lite Annotate evidence:
 
 ## Lite Annotate Runtime Config
 
+Production ecommerce target:
+
+```text
+https://lite-annotate-commerce-demo.vercel.app
+```
+
 The site reads Lite Annotate config in this order:
 
 1. URL query params: `?annotateApi=https://...&widgetUrl=https://.../widget.js`
@@ -81,7 +87,7 @@ http://localhost:4174/?annotateApi=http://localhost:3001
 For hosted testing, open the deployed site with:
 
 ```text
-https://<commerce-site>/?annotateApi=https://<lite-annotate-api>
+https://lite-annotate-commerce-demo.vercel.app/?annotateApi=https://<lite-annotate-api>
 ```
 
 The site sends this repo identifier in Lite Annotate payloads:
