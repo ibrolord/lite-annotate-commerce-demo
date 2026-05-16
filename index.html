@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cedar & Sail</title>
+    <meta
+      name="description"
+      content="Cedar & Sail is a commerce demo site for Lite Annotate hackathon testing."
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" data-route-link>
+        <span class="brand-mark" aria-hidden="true">C&S</span>
+        <span>Cedar & Sail</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="/shop" data-route-link>Shop</a>
+        <a href="/cart" data-route-link>Cart <span id="nav-cart-count">0</span></a>
+        <a href="/checkout" data-route-link>Checkout</a>
+        <a href="/account" data-route-link>Account</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" data-view="home">
+        <div class="hero-copy">
+          <p class="section-label">Weekend goods for daily use</p>
+          <h1>Travel-ready home and carry essentials.</h1>
+          <p>
+            Cedar & Sail curates compact gear, durable textiles, and practical
+            home goods for people who split their time between city routines and
+            road weekends.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/shop" data-route-link>Shop new arrivals</a>
+            <a class="button button-secondary" href="/account" data-route-link>View loyalty perks</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Cedar & Sail packed goods display">
+          <div class="product-stack">
+            <span class="tag">Waxed canvas</span>
+            <span class="bag"></span>
+            <span class="blanket"></span>
+            <span class="mug"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-view="shop">
+        <div class="section-heading">
+          <p class="section-label">Catalog</p>
+          <h2>New arrivals</h2>
+          <p>Small-batch staples with practical materials and calm colors.</p>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <section class="section cart-layout" data-view="cart">
+        <div>
+          <p class="section-label">Cart</p>
+          <h2>Your bag</h2>
+          <div class="cart-lines" id="cart-lines"></div>
+        </div>
+        <aside class="summary-panel">
+          <h3>Order summary</h3>
+          <div class="summary-row">
+            <span>Items</span>
+            <strong id="summary-items">0</strong>
+          </div>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="summary-subtotal">$0</strong>
+          </div>
+          <a class="button button-primary full-width" href="/checkout" data-route-link>Continue to checkout</a>
+        </aside>
+      </section>
+
+      <section class="section checkout-layout" data-view="checkout">
+        <div>
+          <p class="section-label">Checkout</p>
+          <h2>Shipping details</h2>
+          <form class="checkout-form" id="checkout-form">
+            <label>
+              Email
+              <input name="email" type="email" value="demo@cedarandsail.test" />
+            </label>
+            <label>
+              Name
+              <input name="name" type="text" value="Jordan Lee" />
+            </label>
+            <label>
+              Address
+              <input name="address" type="text" value="38 Bayview Market" />
+            </label>
+            <button class="button button-primary" type="submit">Place demo order</button>
+          </form>
+          <p class="form-status" id="checkout-status">Quote ready. No payment is collected in this demo.</p>
+        </div>
+        <aside class="summary-panel">
+          <h3>Live quote</h3>
+          <button class="button button-secondary full-width" type="button" id="refresh-quote">Refresh quote</button>
+          <pre class="quote-box" id="quote-box">Waiting for quote...</pre>
+        </aside>
+      </section>
+
+      <section class="section account-layout" data-view="account">
+        <div>
+          <p class="section-label">Account</p>
+          <h2>Loyalty profile</h2>
+          <p>
+            Members get repair credits, free shipping, and early access to limited
+            inventory.
+          </p>
+          <button class="button button-primary" type="button" id="load-loyalty-profile">
+            Load loyalty profile
+          </button>
+          <p class="form-status" id="loyalty-status">Profile not loaded.</p>
+        </div>
+        <aside class="profile-panel" id="profile-panel">
+          <span class="profile-avatar">JL</span>
+          <h3>Jordan Lee</h3>
+          <p>Trail Club member since 2025</p>
+          <dl>
+            <div>
+              <dt>Credits</dt>
+              <dd>$24</dd>
+            </div>
+            <div>
+              <dt>Orders</dt>
+              <dd>6</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Cedar & Sail</span>
+      <span>Lite Annotate ecommerce test app</span>
+    </footer>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script type="module" src="/src/lite-annotate.js"></script>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

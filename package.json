@@ -1,0 +1,12 @@
+{
+  "name": "lite-annotate-commerce-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/customer.js && node --check src/app.js && node --check src/lite-annotate.js && node --check scripts/dev-server.mjs"
+  }
+}
+
