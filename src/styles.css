@@ -136,6 +136,7 @@ h1 {
 .hero-copy h1 {
   max-width: 760px;
   line-height: 0.98;
+  color: #2563eb;
 }
 
 h2 {
